@@ -7,12 +7,10 @@ const endereços = [
 
 const getLocation = (addresses, cep) => {
     const findLocation = addresses.find((address) => address.cep === cep)
-    return findLocation
+    return findLocation ? findLocation.rua : 'CEP Not found!';
 } 
 
 console.log(getLocation(endereços, 00222444))
 
 
 
-
-  // Octal literals are not allowed. Use the syntax '0o111222'.ts(1121)
